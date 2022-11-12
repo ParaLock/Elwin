@@ -1,0 +1,11 @@
+[package]
+name = "integration_wgpu"
+version = "0.1.0"
+authors = ["Héctor Ramón Jiménez <hector0193@gmail.com>", "Nathanael Mercaldo <nathanael.mercaldo@gmail.com>"]
+edition = "2021"
+publish = false
+
+[dependencies]
+iced_winit = "0.5.1"
+iced_wgpu = "0.6.1"
+env_logger = "0.8"
