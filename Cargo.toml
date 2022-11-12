@@ -6,6 +6,12 @@ edition = "2021"
 publish = false
 
 [dependencies]
+plotters-iced = "*"
+iced = "*"
+plotters="*"
+
+
 iced_winit = "0.5.1"
 iced_wgpu = "0.6.1"
-env_logger = "0.8"
+
+env_logger = "*"

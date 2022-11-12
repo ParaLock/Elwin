@@ -1,6 +1,8 @@
 use iced_wgpu::Renderer;
 use iced_winit::widget::{slider, text_input, Column, Row, Text};
 use iced_winit::{Alignment, Color, Command, Element, Length, Program};
+use plotters::{ series::LineSeries, style::RED};
+use plotters_iced::{Chart, ChartWidget, DrawingBackend, ChartBuilder};
 
 pub struct Controls {
     background_color: Color,
@@ -26,6 +28,13 @@ impl Controls {
     }
 }
 
+impl Chart<Message> for Controls {
+    fn build_chart<DB:DrawingBackend>(&self, builder: ChartBuilder<DB>) {
+        //build your chart here, please refer to plotters for more details
+        println!("Test 123");
+    }
+}
+
 impl Program for Controls {
     type Renderer = Renderer;
     type Message = Message;
@@ -46,6 +55,11 @@ impl Program for Controls {
     fn view(&self) -> Element<Message, Renderer> {
         let background_color = self.background_color;
         let text = &self.text;
+
+        ChartWidget::new(self)
+            .width(Length::Unit(200))
+            .height(Length::Unit(200))
+            .into();
 
         let sliders = Row::new()
             .width(Length::Units(500))
