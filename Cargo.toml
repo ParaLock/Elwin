@@ -1,20 +1,21 @@
 [package]
-name = "plotters-gtk-demo"
-version = "0.1.0"
-authors = ["Hao Hou <haohou302@gmail.com>"]
+name = "piston-examples"
+version = "0.0.0"
 edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["bvssvni <bvssvni@gmail.com>"]
+keywords = []
 
 [dependencies]
-cairo-rs = "0.15.11"
-gtk = "0.15.5"
-gio = "0.15.11"
-
-[dependencies.plotters]
-git = "https://github.com/plotters-rs/plotters"
-default_features = false
-features = ["surface_series"]
-
-[dependencies.plotters-cairo]
-git = "https://github.com/plotters-rs/plotters-cairo"
+piston_window = "0.123.0"
+find_folder = "0.3.0"
+piston-ai_behavior = "0.33.0"
+piston2d-sprite = "0.66.0"
+image = "0.24.1"
+piston2d-drag_controller = "0.30.0"
+piston2d-deform_grid = "0.12.0"
+gfx = "0.18.1"
+gfx_device_gl = "0.16.2"
+vecmath = "1.0.0"
+camera_controllers = "0.32.0"
+rand = "0.6.0"
+shader_version = "0.7.0"
